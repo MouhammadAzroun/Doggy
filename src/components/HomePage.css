@@ -1,0 +1,22 @@
+/* HomePage.css */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+    gap: 16px; /* Adjust the gap between images as needed */
+  }
+  
+  /* Set a fixed size for the images */
+  .image-grid img {
+    width: 220px; /* Adjust the width as needed */
+    height: 220px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and crop as needed */
+    transition: transform 0.2s; /* Add a 0.2s transition effect for the transform property */
+
+  }
+
+  /* Add a hover effect to scale the images on mouse hover */
+.image-grid img:hover {
+    transform: scale(1.1); /* Scale the image to 110% of its original size */
+  }
+  

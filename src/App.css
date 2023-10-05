@@ -44,3 +44,75 @@ body {
 .read-the-docs {
   color: #888;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
+  gap: 16px; /* Adjust the gap between images as needed */
+}
+
+/* Set a fixed size for the images */
+.image-grid img {
+  width: 220px; /* Adjust the width as needed */
+  height: 220px; /* Adjust the height as needed */
+  object-fit: cover; /* Maintain aspect ratio and crop as needed */
+  transition: transform 0.2s; /* Add a 0.2s transition effect for the transform property */
+
+}
+
+/* Add a hover effect to scale the images on mouse hover */
+.image-grid img:hover {
+  transform: scale(1.1); /* Scale the image to 110% of its original size */
+}
+
+
+
+/* Style for the DogDetails page */
+.dog-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.dog-image-container {
+  flex: 0 0 300px; /* Fixed width for the image container */
+  margin-right: 20px;
+}
+
+.dog-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.dog-info-container {
+  flex: 1;
+}
+
+/* Style for details sections */
+.details-section {
+  margin-bottom: 20px;
+}
+
+.details-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.details-section p {
+  margin: 0;
+  padding-left: 10px;
+}
+
+/* Style for the return button */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

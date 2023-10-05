@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const DogDetails = ({ dogData }) => {
   const { index, ownerName, ownerLastName, ownerPhoneNumber } = useParams();
@@ -10,22 +10,35 @@ const DogDetails = ({ dogData }) => {
   }
 
   return (
-    <div>
-      <h2>Dog Details</h2>
-      <img
-        src={selectedDog.img}
-        alt={`Dog ${index}`}
-        className="dog-image"
-      />
-      <p>Name: {selectedDog.name}</p>
-      <p>Sex: {selectedDog.sex}</p>
-      <p>Breed: {selectedDog.breed}</p>
-      <p>Age: {selectedDog.age}</p>
-      <p>Chip Number: {selectedDog.chipNumber}</p>
-      <h3>Owner's Information</h3>
-      <p>Owner Name: {ownerName}</p>
-      <p>Owner Last Name: {ownerLastName}</p>
-      <p>Owner Phone Number: {ownerPhoneNumber}</p>
+    <div className="dog-details-container">
+      <div className="dog-image-container">
+        <img
+          src={selectedDog.img}
+          alt={`Dog ${index}`}
+          className="dog-image"
+        />
+      </div>
+      <div className="dog-info-container">
+        <h2>Dog Details</h2>
+        <div className="details-section">
+          <h3>Dog Information</h3>
+          <p><strong>Name:</strong> {selectedDog.name}</p>
+          <p><strong>Sex:</strong> {selectedDog.sex}</p>
+          <p><strong>Breed:</strong> {selectedDog.breed}</p>
+          <p><strong>Age:</strong> {selectedDog.age}</p>
+          <p><strong>Chip Number:</strong> {selectedDog.chipNumber}</p>
+        </div>
+        <div className="details-section">
+          <h3>Owner's Information</h3>
+          <p><strong>Owner Name:</strong> {ownerName}</p>
+          <p><strong>Owner Last Name:</strong> {ownerLastName}</p>
+          <p><strong>Owner Phone Number:</strong> {ownerPhoneNumber}</p>
+        </div>
+        
+        <Link to="/homepage">
+          <button>Return to Home Page</button>
+        </Link>
+      </div>
     </div>
   );
 };

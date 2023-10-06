@@ -6,14 +6,11 @@ import DogDetails from './components/DogDetails';
 import './App.css';
 
 function App() {
-  // Define the API URL
   const apiUrl = 'https://api.jsonbin.io/v3/b/651ee3b80574da7622b4d1c5';
 
-  // State to store the fetched data
   const [dogData, setDogData] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the API and set it in the state
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {

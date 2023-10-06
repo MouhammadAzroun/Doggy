@@ -9,65 +9,26 @@ body {
   text-align: center; 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Adjust the number of columns as needed */
-  gap: 16px; /* Adjust the gap between images as needed */
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 16px; 
 }
 
-/* Set a fixed size for the images */
 .image-grid img {
-  width: 220px; /* Adjust the width as needed */
-  height: 220px; /* Adjust the height as needed */
-  object-fit: cover; /* Maintain aspect ratio and crop as needed */
-  transition: transform 0.2s; /* Add a 0.2s transition effect for the transform property */
+  width: 220px; 
+  height: 220px; 
+  object-fit: cover; 
+  transition: transform 0.2s; 
 
 }
 
-/* Add a hover effect to scale the images on mouse hover */
 .image-grid img:hover {
-  transform: scale(1.1); /* Scale the image to 110% of its original size */
+  transform: scale(1.1); 
 }
 
 
 
-/* Style for the DogDetails page */
 .dog-details-container {
   display: flex;
   justify-content: space-between;
@@ -76,7 +37,7 @@ body {
 }
 
 .dog-image-container {
-  flex: 0 0 300px; /* Fixed width for the image container */
+  flex: 0 0 300px; 
   margin-right: 20px;
 }
 
@@ -89,7 +50,6 @@ body {
   flex: 1;
 }
 
-/* Style for details sections */
 .details-section {
   margin-bottom: 20px;
 }
@@ -104,7 +64,6 @@ body {
   padding-left: 10px;
 }
 
-/* Style for the return button */
 button {
   padding: 10px 20px;
   background-color: #007bff;
@@ -116,3 +75,37 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem; 
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .image-grid img {
+    width: 100%; 
+    height: auto;
+  }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (min-width: 1025px) {
+}
+
+@media (max-width: 600px) {
+  .dog-image-container {
+    display: none;
+  }
+}
+
+
